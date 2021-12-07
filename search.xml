@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/12/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>鸿蒙开发   1.2  组件布局和事件</title>
-    <url>/2021/12/01/newpapername/</url>
+    <url>/2021/12/01/HarmonyOS1-2/</url>
     <content><![CDATA[<h1 id="组件布局和事件"><a href="#组件布局和事件" class="headerlink" title="组件布局和事件"></a>组件布局和事件</h1><h2 id="单击事件"><a href="#单击事件" class="headerlink" title="单击事件"></a>单击事件</h2><p>在那个界面搭建组件就在那个界面的XML文件中去写组件</p>
 <p>button组件</p>
 <p>在XML中配置button,注意XML文件的注释不能写在标记里</p>
@@ -52,5 +31,88 @@
       <categories>
         <category>鸿蒙开发</category>
       </categories>
+  </entry>
+  <entry>
+    <title>LeetCode 1034.边界着色</title>
+    <url>/2021/12/07/LeetCode12-7/</url>
+    <content><![CDATA[<h1 id="LeetCode-1034"><a href="#LeetCode-1034" class="headerlink" title="LeetCode 1034"></a>LeetCode 1034</h1><p>题目传送<a href="https://leetcode-cn.com/problems/coloring-a-border/">戳这里</a></p>
+<h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>给你一个大小为 <em>m</em> x <em>n</em> 的整数矩阵 grid ，表示一个网格。另给你三个整数 row、col 和 color 。网格中的每个值表示该位置处的网格块的颜色。两个网格块属于同一 连通分量需满足下述全部条件：</p>
+<ul>
+<li>两个网格块颜色相同</li>
+<li>在上、下、左、右任意一个方向上相邻</li>
+</ul>
+<p>连通分量的边界是指连通分量中满足下述条件之一的所有网格块：</p>
+<ul>
+<li>在上、下、左、右四个方向上与不属于同一连通分量的网格块相邻</li>
+<li>在网格的边界上（第一行/列或最后一行/列）</li>
+</ul>
+<p>请你使用指定颜色 <em>color</em>  为所有包含网格块  <em>grid[row][col]</em>  的 <strong>连通分量的边界</strong> 进行着色，并返回最终的网格 grid 。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入：grid = [[1,1],[1,2]],  row = 0,  col = 0,  color = 3</p>
+<p>输出：[[3,3],[3,2]]</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：grid = [[1,2,2],[2,3,2]],  row = 0,  col = 1,  color = 3<br>输出：[[1,3,3],[2,3,3]]</p>
+</blockquote>
+<p><strong>示例 3：</strong></p>
+<blockquote>
+<p>输入：grid = [[1,1,1],[1,1,1],[1,1,1]], row = 1, col = 1, color = 2<br>输出：[[2,2,2],[2,1,2],[2,2,2]]</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<blockquote>
+<p>m == grid.length<br>n == grid[i].length<br>1 &lt;= m, n &lt;= 50<br>1 &lt;= grid[i][j], color &lt;= 1000<br>0 &lt;= row &lt; m<br>0 &lt;= col &lt; n</p>
+</blockquote>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>题意就是说给你一个  <em>m</em> x <em>n</em> 的网格矩阵，每个网格都有一种颜色，用不同数字表示不同颜色，若一个网格的上下左右某个或多个方块中颜色相同（数字相同），则称他们同属于一个连通分量。</p>
+<p>而连通分量的边界则指在一个连通分量中的某个方块的上下左右不全是相同颜色的方块，所有这些方块连起来构成连通分量的边界，也可以理解成一片颜色的边缘方块。如图</p>
+<p><img src="/2021/12/07/LeetCode12-7/_posts/LeetCode12-7/2.png" alt="图1"></p>
+<p>可以看出图片中红色区域中的红线则表示边界，而边界所触及的方块也就叫做连通分量的边界。所以我们现在是要对给定的包含  <em>grid[row][col]</em> 这个方块的连通分量的边界染色成 <em>color</em> ，请着重注意理解连通分量的边界这一概念。</p>
+<p>下面如图给出样例的模拟：</p>
+<p><img src="/2021/12/07/LeetCode12-7/_posts/LeetCode12-7/1.png" alt="图2"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>思路就是我们以 *grid[row][col]*为起点BFS   <em>grid[row][col]</em> 所属的联通分量，然后去寻找边，找到边就加到border数组中，最后将border数组中对应的点遍历染色。</p>
+<p>然后分析我们需要一个BFS中经典queue，需要pair&lt;int&gt;&lt;int&gt;去储存点,还需要一个judge数组判断该点是否已经遍历过。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>Leetcode提交代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;<span class="comment">//用pair储存点</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">colorBorder</span>(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; grid, <span class="keyword">int</span> row, <span class="keyword">int</span> col, <span class="keyword">int</span> color) &#123;</span><br><span class="line">        <span class="keyword">int</span> n=grid.<span class="built_in">size</span>(),m=grid[<span class="number">0</span>].<span class="built_in">size</span>();<span class="comment">//grid的长和宽；n对应x，m对应y</span></span><br><span class="line">        <span class="keyword">bool</span> judge[n][m];<span class="comment">//相当于visited数组</span></span><br><span class="line">        <span class="built_in">memset</span>(judge,<span class="number">0</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(judge));</span><br><span class="line">        vector&lt;pii&gt; boder;<span class="comment">//用来储存边界</span></span><br><span class="line">        <span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>&#125;;<span class="comment">//方向数组</span></span><br><span class="line">        <span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        queue&lt;pii&gt; que;<span class="comment">//BFS</span></span><br><span class="line">        que.<span class="built_in">push</span>(<span class="built_in">pii</span>(row,col));</span><br><span class="line">        judge[row][col]=<span class="literal">true</span>;<span class="comment">//起点已经遍历过</span></span><br><span class="line">        <span class="keyword">while</span>(!que.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            pii node =que.<span class="built_in">front</span>();</span><br><span class="line">            que.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">int</span> x=node.first,y=node.second;</span><br><span class="line">            <span class="keyword">bool</span> isborder=<span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">                <span class="keyword">int</span> nx=x+dx[i];</span><br><span class="line">                <span class="keyword">int</span> ny=y+dy[i];</span><br><span class="line">                <span class="keyword">if</span>(!(<span class="number">0</span>&lt;=nx&amp;&amp;nx&lt;n &amp;&amp; <span class="number">0</span>&lt;=ny&amp;&amp;ny&lt;m &amp;&amp; grid[nx][ny]==grid[row][col]))&#123;<span class="comment">//边界的判断条件</span></span><br><span class="line">                    isborder=<span class="literal">true</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!judge[nx][ny])&#123;<span class="comment">//如果是边界就没必要继续放在queue中去BFS，所以加入不是边界的点继续去找边界</span></span><br><span class="line">                    judge[nx][ny]=<span class="literal">true</span>;</span><br><span class="line">                    que.<span class="built_in">push</span>(<span class="built_in">pii</span>(nx,ny));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(isborder)&#123;<span class="comment">//将边界加入boder</span></span><br><span class="line">                boder.<span class="built_in">push_back</span>(<span class="built_in">pii</span>(x,y));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[x,y]:boder) &#123;</span><br><span class="line">            grid[x][y]=color;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> grid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>完结撒花，后面更新DFS版本；</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>-LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/12/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>suanfa</title>
+    <url>/2021/12/07/suanfa/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>“leetcode”</title>
+    <url>/2021/12/07/%E2%80%9Cleetcode%E2%80%9D/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
