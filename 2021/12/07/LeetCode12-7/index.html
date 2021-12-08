@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://mnzke.cn/2021/12/07/LeetCode12-7/2.png">
 <meta property="og:image" content="http://mnzke.cn/2021/12/07/LeetCode12-7/1.png">
 <meta property="article:published_time" content="2021-12-07T14:21:29.000Z">
-<meta property="article:modified_time" content="2021-12-08T03:03:38.114Z">
+<meta property="article:modified_time" content="2021-12-08T14:18:27.643Z">
 <meta property="article:author" content="Mnzke">
 <meta property="article:tag" content="-LeetCode">
 <meta name="twitter:card" content="summary">
@@ -92,8 +92,8 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/LeetCode" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/%E7%AE%97%E6%B3%95" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
   </ul>
 </nav>
@@ -145,12 +145,12 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-          <a href="/categories/%E7%AE%97%E6%B3%95">
-        <span class="site-state-item-count">3</span>
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-          <a href="/tags/LeetCode">
+          <a href="/tags/">
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -240,7 +240,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-08 11:03:38" itemprop="dateModified" datetime="2021-12-08T11:03:38+08:00">2021-12-08</time>
+        <time title="修改时间：2021-12-08 22:18:27" itemprop="dateModified" datetime="2021-12-08T22:18:27+08:00">2021-12-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -248,7 +248,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+          <a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a>
         </span>
     </span>
 
@@ -291,7 +291,7 @@
 <blockquote>
 <p>m == grid.length<br>n == grid[i].length<br>1 &lt;= m, n &lt;= 50<br>1 &lt;= grid[i][j], color &lt;= 1000<br>0 &lt;= row &lt; m<br>0 &lt;= col &lt; n</p>
 </blockquote>
-<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>题意就是说给你一个  <em>m</em> x <em>n</em> 的网格矩阵，每个网格都有一种颜色，用不同数字表示不同颜色，若一个网格的上下左右某个或多个方块中颜色相同（数字相同），则称他们同属于一个连通分量。</p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>题意就是说给你一个  * m * x * n * 的网格矩阵，每个网格都有一种颜色，用不同数字表示不同颜色，若一个网格的上下左右某个或多个方块中颜色相同（数字相同），则称他们同属于一个连通分量。</p>
 <p>而连通分量的边界则指在一个连通分量中的某个方块的上下左右不全是相同颜色的方块，所有这些方块连起来构成连通分量的边界，也可以理解成一片颜色的边缘方块。如图</p>
 <p><img src="/2021/12/07/LeetCode12-7/2.png" alt="图1"></p>
 <p>可以看出图片中红色区域中的红线则表示边界，而边界所触及的方块也就叫做连通分量的边界。所以我们现在是要对给定的包含  <em>grid[row][col]</em> 这个方块的连通分量的边界染色成 <em>color</em> ，请着重注意理解连通分量的边界这一概念。</p>
